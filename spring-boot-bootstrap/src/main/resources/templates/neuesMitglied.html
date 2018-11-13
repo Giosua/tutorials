@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>unihockey club bern</title>
+<link rel="stylesheet" type="text/css" href="uhcbernost.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Vollständiger Name und Geburtsdatum</h1>
+	<form action="#" th:action="@{/neuesMitglied}" th:object="${mitglied}"
+		method="post">
+		<table>
+			<tr>
+				<td>Vorname:</td>
+				<td><input type="text" th:field="*{vorname}" /></td>
+			</tr>
+			<tr>
+				<td>nachname:</td>
+				<td><input type="text" th:field="*{nachname}" /></td>
+			</tr>
+			<tr>
+				<td>geburtsdatum:</td>
+				<td><input type="text" th:field="*{geburtsdatum}" /></td>
+			</tr>
+		</table>
+		<p>
+			<input type="submit" value="Submit" /> <input type="reset"
+				value="Reset" />
+		</p>
+
+	</form>
+</body>
+</html>

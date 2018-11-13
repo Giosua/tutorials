@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>unihockey club bern</title>
+<link rel="stylesheet" type="text/css" href="uhcbernost.css"/>
+</head>
+<body>
+	<h1>Mitgliederliste</h1>
+	<p>
+		wilkommen zu der inoffiziellen website des uhc bernosts<span
+			th:text="${#dates.format(today, 'dd. MMMM yyyy')}">Our App</span>
+	</p>
+	<table border=1>
+		<tr th:each="mitglied : ${mitglieder}">
+			<td th:text="${mitglied.vorname + ' ' + mitglied.nachname}" />
+			<td th:text="${#dates.format(mitglied.geburtsdatum, 'dd. MM yyyy')}" />
+		</tr>
+	</table>
+	
+	<p><a href="./neuesMitglied">werde mitglied</a></p>
+</body>
+</html>

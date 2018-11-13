@@ -22,7 +22,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(classes = Application.class, webEnvironment = WebEnvironment.DEFINED_PORT)
 public class SpringBootBootstrapIntegrationTest {
 
-    private static final String API_ROOT = "http://localhost:8081/api/books";
+    private static final String API_ROOT = "http://localhost:8080/api/books";
 
     @Test
     public void whenGetAllBooks_thenOK() {
